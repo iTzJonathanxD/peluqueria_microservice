@@ -1,0 +1,41 @@
+.dashboard {
+    margin-left: 270px; /* Aumenta el margen para el ancho del sidebar */
+    padding: 30px;
+    background-color: #f4f6f7;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashboard h1 {
+    color: #2c3e50;
+    font-size: 26px; /* Tamaño más grande para el título */
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.dashboard-content {
+    background: white;
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: box-shadow 0.3s ease;
+}
+
+.dashboard-content:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Efecto al pasar el ratón */
+}
+
+
+.btn.descargar-pdf {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn.descargar-pdf:hover {
+    background-color: #0056b3;
+}

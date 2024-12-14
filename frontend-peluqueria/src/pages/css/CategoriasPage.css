@@ -1,0 +1,122 @@
+.categorias-page {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.titulo {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn.conectar {
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn.conectar:hover {
+    background-color: #2980b9;
+}
+
+.btn.crear {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn.crear:hover {
+    background-color: #1e8449;
+}
+
+.btn.actualizar {
+    background-color: #f1c40f;
+    color: white;
+}
+
+.btn.actualizar:hover {
+    background-color: #d4ac0d;
+}
+
+.btn.cancelar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn.cancelar:hover {
+    background-color: #c0392b;
+}
+
+.btn.editar {
+    background-color: #8e44ad;
+    color: white;
+}
+
+.btn.editar:hover {
+    background-color: #71368a;
+}
+
+.btn.eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn.eliminar:hover {
+    background-color: #c0392b;
+}
+
+.formulario {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    width: calc(50% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tabla-categorias {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-categorias thead tr {
+    background-color: #34495e;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+}
+
+.tabla-categorias th, .tabla-categorias td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-categorias tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla-categorias tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
