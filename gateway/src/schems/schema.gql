@@ -1,0 +1,184 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Categoria {
+  id: Int!
+  nombre: String!
+  descripcion: String
+}
+
+type Factura {
+  id: Int!
+  montoTotal: Float!
+  metodoPago: String!
+  fechaPago: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Cliente {
+  id: Int!
+  nombre: String!
+  telefono: String!
+  email: String
+  direccion: String
+}
+
+type Mascota {
+  id: Int!
+  cliente: Cliente!
+  nombre: String!
+  raza: String
+  edad: Int
+  peso: Float
+}
+
+type Servicio {
+  id: Int!
+  nombre: String!
+  descripcion: String
+  precio: Int!
+  duracion: Int!
+  categoria: Categoria!
+}
+
+type Cita {
+  id: Int!
+  cliente: Cliente!
+  mascota: Mascota!
+  servicio: Servicio!
+  fechaCita: DateTime!
+  estado: String!
+}
+
+type Query {
+  categorias: [Categoria!]!
+  categoria(id: Int!): Categoria!
+  facturas: [Factura!]!
+  factura(id: Int!): Factura!
+  clientes: [Cliente!]!
+  cliente(id: Int!): Cliente!
+  citas: [Cita!]!
+  cita(id: Int!): Cita!
+  mascotas: [Mascota!]!
+  mascota(id: Int!): Mascota!
+  servicios: [Servicio!]!
+  servicio(id: Int!): Servicio!
+}
+
+type Mutation {
+  createCategoria(createCategoriaInput: CreateCategoriaDto!): Categoria!
+  updateCategoria(updateCategoriaInput: UpdateCategoriaDto!): Categoria!
+  removeCategoria(id: Int!): Categoria!
+  createFactura(createFacturaInput: CreateFacturaDto!): Factura!
+  updateFactura(updateFacturaInput: UpdateFacturaDto!): Factura!
+  removeFactura(id: Int!): Factura!
+  createCliente(createClienteInput: CreateClienteDto!): Cliente!
+  updateCliente(updateClienteInput: UpdateClienteDto!): Cliente!
+  removeCliente(id: Int!): Cliente!
+  createCita(createCitaInput: CreateCitaDto!): Cita!
+  updateCita(updateCitaInput: UpdateCitaDto!): Cita!
+  removeCita(id: Int!): Cita!
+  createMascota(createMascotaInput: CreateMascotaDto!): Mascota!
+  updateMascota(updateMascotaInput: UpdateMascotaDto!): Mascota!
+  removeMascota(id: Int!): Mascota!
+  createServicio(createServicioInput: CreateServicioDto!): Servicio!
+  updateServicio(updateServicioInput: UpdateServicioDto!): Servicio!
+  removeServicio(id: Int!): Servicio!
+}
+
+input CreateCategoriaDto {
+  nombre: String!
+  descripcion: String
+}
+
+input UpdateCategoriaDto {
+  nombre: String
+  descripcion: String
+  id: Int!
+}
+
+input CreateFacturaDto {
+  citaId: Int!
+  montoTotal: Float!
+  metodoPago: String!
+  fechaPago: String
+}
+
+input UpdateFacturaDto {
+  citaId: Int
+  montoTotal: Float
+  metodoPago: String
+  fechaPago: String
+  id: Int!
+}
+
+input CreateClienteDto {
+  nombre: String!
+  telefono: String
+  email: String
+  direccion: String
+}
+
+input UpdateClienteDto {
+  nombre: String
+  telefono: String
+  email: String
+  direccion: String
+  id: Int!
+}
+
+input CreateCitaDto {
+  clienteId: Int!
+  mascotaId: Int!
+  servicioId: Int!
+  fechaCita: DateTime!
+  estado: String
+}
+
+input UpdateCitaDto {
+  clienteId: Int
+  mascotaId: Int
+  servicioId: Int
+  fechaCita: DateTime
+  estado: String
+  id: Int!
+}
+
+input CreateMascotaDto {
+  clienteId: Int!
+  nombre: String!
+  raza: String
+  edad: Int
+  peso: Float
+}
+
+input UpdateMascotaDto {
+  clienteId: Int
+  nombre: String
+  raza: String
+  edad: Int
+  peso: Float
+  id: Int!
+}
+
+input CreateServicioDto {
+  nombre: String!
+  descripcion: String
+  precio: Float!
+  duracion: Float!
+  categoriaId: Float!
+}
+
+input UpdateServicioDto {
+  nombre: String
+  descripcion: String
+  precio: Float
+  duracion: Float
+  categoriaId: Float
+  id: Int!
+}
