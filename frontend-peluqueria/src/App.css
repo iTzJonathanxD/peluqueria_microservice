@@ -1,0 +1,6 @@
+.app-container {
+  display: flex;
+  font-family: 'Roboto', sans-serif; /* Cambiar fuente para un diseño moderno */
+  background-color: #ecf0f1; /* Fondo neutro */
+  color: #34495e; /* Color principal del texto */
+}
